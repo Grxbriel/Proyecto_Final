@@ -143,6 +143,7 @@ text-decoration: underline;
     border-radius: 50px;
     color: #333;
     display: inline-block;
+    cursor: pointer;
     padding: 10px 20px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
