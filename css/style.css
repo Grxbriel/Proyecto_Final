@@ -10,6 +10,7 @@ header {
     padding: 10px;
     position: fixed;
     display: flex;
+    flex-direction:row ;
     top: 0;
     left: 0;
     width: 100%;
@@ -83,13 +84,9 @@ nav a:hover {
 
 /* Estils per a la secció hero */
 
-.hero {
-  
-   
+.hero { 
     background: center/cover no-repeat;
-
     display: flex;
-
     flex-direction: column;
     height: 80vh;
     
@@ -98,7 +95,8 @@ nav a:hover {
 .hero h1 {
     font-size: 3em;
     position: relative;
-    top: 30px;
+    top: 50px;
+    text-align: center;
     
 }
 
@@ -132,15 +130,14 @@ nav a:hover {
     flex-direction: column;
 }
 
-.services li {
+.services ul li {
     font-size: 1.2rem;
     margin-bottom: 10px;
-   
-
     transition: all ease-in-out .3s;
+    cursor: pointer;
 }
 
-.services li:hover {
+.services ul li:hover {
     color: #de291f
 }
 
@@ -197,7 +194,7 @@ footer{
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     #menuPrincipal nav #menu-horizontal{
         opacity: 0;
     }
@@ -209,12 +206,40 @@ footer{
         display: block;
         opacity: 0;
         cursor: pointer;
-        position: fixed;
-        top: 18px;
+        position: relative;
+       
     }
     #checkbtn:checked ~ #menu{
         opacity: 1;
         visibility: visible ;
+        animation: mostrar 2s ease ;
+        -webkit-animation: mostrar 2s ease ;
+}
+    nav #menu-horizontal li {
+        display: inline-block;
+        font-size: .6em;
+        position: relative;
+        left: 30px;
+        margin-left:-10px;
+        top: -20px;
+        
+    }
+    #menuPrincipal>nav>ul>li{
+        list-style: none;
+        float:left;
+        margin-left: -30px;
     }
 
+    @keyframes mostrar {
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: .5;
+        }
+        100%{
+            opacity: 1;
+        }
+        
+    }
 }
