@@ -15,16 +15,33 @@ header {
     width: 100%;
     height: 10%;  
     align-items: center;
+    border-bottom:2px solid red  ;
   
 }
 
-nav ul {
+#menuPrincipal>nav>ul{
+    list-style: none
+ }
+ #menuPrincipal>nav>ul>li{
+     list-style: none;
+     float:left;
+     margin-left: 20px;
+ }
+ .icon-menu{
+     font-size: 1.2em;
+     cursor: pointer;
+ }
+ .icon-menu:hover{
+     color: red;
+ }
+
+nav #menu-horizontal {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav li {
+nav #menu-horizontal li {
     display: inline-block;
     margin-right: 20px;
     
@@ -45,14 +62,36 @@ nav a {
 nav a:hover {
   background-color: #555;
 }
+
+#check-btn{
+    display: none;
+}
+
+#check-btn:checked{
+    opacity: 1;
+    visibility: visible;
+
+}
+#checkbtn{
+    display: none;
+}
+#checkbtn:checked ~ #menu-horizontal{
+    opacity: 1;
+    visibility: visible ;
+}
+
+
 /* Estils per a la secció hero */
+
 .hero {
+  
    
+    background: center/cover no-repeat;
 
     display: flex;
 
     flex-direction: column;
-    height: 100vh;
+    height: 80vh;
     
 }
 
@@ -68,29 +107,17 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
-.hero .cta-btn {
-  
-    border: none;
-    border-radius: 5px;
-    color: #333;
-    display: inline-block;
-    width: 10%;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    padding: 10px 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
 
-.cta-btn:hover {
-    background-color: #333;
-    color: #fff;
-}
 
 /* Estils per a la secció de serveis */
 .services {
     background-color: #d0b4b4;
     padding: 40px;
+    margin: 0;
+  
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .services h2 {
@@ -167,4 +194,27 @@ footer{
     color: #fff;
     background-color: #1FDE82;
     border-color: #1FDE82;
+}
+
+
+@media screen and (max-width: 800px) {
+    #menuPrincipal nav #menu-horizontal{
+        opacity: 0;
+    }
+
+    #check-btn{
+        display: block;
+    }
+    #checkbtn{
+        display: block;
+        opacity: 0;
+        cursor: pointer;
+        position: fixed;
+        top: 18px;
+    }
+    #checkbtn:checked ~ #menu{
+        opacity: 1;
+        visibility: visible ;
+    }
+
 }
