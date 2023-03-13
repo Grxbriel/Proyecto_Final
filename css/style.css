@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+
+}
+
+/* Estils per a la capçalera i barra de navegació */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;  
+    align-items: center;
+  
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5em;
+    transition: all ease-in .5s;
+    -webkit-transition: all ease-in .5s;
+    -moz-transition: all ease-in .5s;
+    -ms-transition: all ease-in .5s;
+    -o-transition: all ease-in .5s;
+}
+  
+nav a:hover {
+  background-color: #555;
+}
+/* Estils per a la secció hero */
+.hero {
+   
+
+    display: flex;
+
+    flex-direction: column;
+    height: 100vh;
+    
+}
+
+.hero h1 {
+    font-size: 3em;
+    position: relative;
+    top: 30px;
+    
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.hero .cta-btn {
+  
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    display: inline-block;
+    width: 10%;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.cta-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estils per a la secció de serveis */
+.services {
+    background-color: #d0b4b4;
+    padding: 40px;
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.services ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; display: inline-flex;
+    flex-direction: column;
+}
+
+.services li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+   
+
+    transition: all ease-in-out .3s;
+}
+
+.services li:hover {
+    color: #de291f
+}
+
+/* Estils per al peu de pàgina */
+footer{
+    background: #f2f2f2;
+    padding: 60px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+    align-items: center;
+}
+
+.parteFooter p{
+    display: block;
+    text-decoration: none;
+    color: #5D6678;
+    font-weight: 300;
+    margin-bottom: 10px;
+    
+}
+
+.parteFooter h4{
+    color: #1d273b;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    position: relative;
+    left: 30px;
+}
+.social-media i{
+    font-size: 20px;
+    display: inline-block;
+    color: #adb6c7;
+    border: 1px solid #adb6c7;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    transition: all ease-in-out .3s;
+    margin-right: 5px;
+
+}
+
+.social-media i:hover{
+    color: #fff;
+    background-color: #1FDE82;
+    border-color: #1FDE82;
+}
