@@ -175,6 +175,8 @@ text-decoration: underline;
 .services h2 {
     font-size: 2em;
     margin-bottom: 20px;
+    position: relative;
+    top: -10px;
 }
 
 .services ul {
@@ -271,7 +273,7 @@ footer{
 }
     nav #menu-horizontal li {
         display: inline-block;
-        font-size: .6em;
+        font-size: .9em;
         position: relative;
         left: 30px;
         margin-left:-10px;
